@@ -1,9 +1,9 @@
-$color-primary: #3046C5;
-$color-secondary: #5637dd;
+$color-primary: #bc1b6b;
+$color-secondary: #271090;
 $color-pale: #CEC8FF;
 $color-mid: #901CAD;
 $color-dark: #60106b;
-$color-black-transparent: rgba(0, 0, 0, 0.5);
+$color-black-transparent: rgba(198, 52, 52, 0.5);
 
 $body-font: "Open Sans", sans-serif;
 $header-font: "Lobster", cursive;
@@ -172,9 +172,32 @@ map-responsive {
     height: 0;
 }
 
+.carousel {
+    border: solid #5637dd;
+  }
+  
 #carouselButton {
     position: absolute;
     right: 0;
     bottom: 0;
     z-index: 100;
+  }
+  
+#reserveModal {
+    .modal-header {
+      background-color: $color-teal;
+      color: white;
+    }
+  }
+  
+#loginModal {
+    .modal-header {
+      background-color: $color-mid;
+      color: white;
+    }
+  }
+
+
+
+
 }

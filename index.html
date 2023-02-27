@@ -6,15 +6,19 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- Bootstrap CSS -->
+    <!-- build:css css/main.css -->
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />
-
-    <!-- Additional CSS must be placed after Bootstrap CSS -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans" />
-    <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <!-- endbuild -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans" />
+
+
+
     <title>NuCamp: A Better Way To Camp</title>
+
+
 </head>
 
 <body>
@@ -29,28 +33,28 @@
                     <h2> a better way to camp</h2>
                 </div>
                 <div class="col col-md-4 col-xl-2 align-self-right ">
-                    <a role="button" class="btn-info btn btn-lg" data-target="#reserveModal" data-toggle="modal"
-                        data-placement="bottom" data-html="true"
+                    <a role="button" class="btn-info btn btn-lg" id="reserveButton" 
                         title="Or call us at <br /><strong>1-206-555-1234</strong>">Reserve Campsite</a>
                 </div>
             </div>
         </div>
     </header>
+
     <div id="reserveModal" class="modal fade" role="dialog">
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
-                <div class="modal-header bg-info text-white">
+                <div class="modal-header">
                     <h3 class="modal-title">Reserve a Campsite</h3>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    </button>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
                 <div class="modal-body">
                     <div class="container-fluid">
-
-                        <form class="form-horizontal">
-                            <div class="form-group">
+<form>
+                        
+                            <div class="form-group row">
                                 <div class="col-12 col-sm-8 float-right">
                                     <label for="numCampers">Number of Campers</label>
+                                    <div class="col-sm-6">
                                     <select class="form-control align-items-right" id="numCampers">
                                         <option value="">Select...</option>
                                         <option>1</option>
@@ -61,8 +65,8 @@
                                         <option>6</option>
                                     </select>
                                 </div>
-
-                                <div class="form-group">
+</div>
+                                <div class="row form-group">
                                     <div class="col-12 col-sm-8 mb-4 float-right">
                                         <label for="DateChampers" class="col-form-label col-sm-6">Date</label>
 
@@ -118,7 +122,7 @@
                         <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
                     </ul>
                     <span class="navbar-text ml-auto">
-                        <a role="button" data-toggle="modal" data-target="#loginModal">
+                        <a role="button" id="loginButton">
                             <i class="fa fa-sign-in"></i> Login
                         </a>
                     </span>
@@ -130,7 +134,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h3 class="modal-title">Login</h3>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <button type="button" class="close" id="loginButton";</button>
                 </div>
                 <div class="modal-body">
                     <div class="container-fluid">
@@ -309,38 +313,17 @@
         </div>
     </footer>
 
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
+        <!-- build:js js/main.js -->
+    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <!-- endbuild -->
 
 
-
-        <script>
-            $(function() {
-                $(".carousel").carousel( { interval: 2000 } );
-                $("#carouselButton").click(function(){
-                    if ($("#carouselButton").children("i").hasClass("fa-pause")) {
-                        $(".carousel").carousel("pause");
-                        $("#carouselButton").children("i").removeClass("fa-pause");
-                        $("#carouselButton").children("i").addClass("fa-play");
-                    } else {
-                        $(".carousel").carousel("cycle");
-                        $("#carouselButton").children("i").removeClass("fa-play");
-                        $("#carouselButton").children("i").addClass("fa-pause"); 
-                    }
-                });
-            });
-        </script>
-
-
-
+    <script src="./js/scripts.js"></script>
 </body>
+
+
 
 </html>
