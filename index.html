@@ -14,10 +14,7 @@
     <!-- endbuild -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans" />
 
-
-
     <title>NuCamp: A Better Way To Camp</title>
-
 
 </head>
 
@@ -33,7 +30,7 @@
                     <h2> a better way to camp</h2>
                 </div>
                 <div class="col col-md-4 col-xl-2 align-self-right ">
-                    <a role="button" class="btn-info btn btn-lg" id="reserveButton" 
+                    <a role="button" class="btn-info btn btn-lg" id="reserveButton"
                         title="Or call us at <br /><strong>1-206-555-1234</strong>">Reserve Campsite</a>
                 </div>
             </div>
@@ -49,23 +46,22 @@
                 </div>
                 <div class="modal-body">
                     <div class="container-fluid">
-<form>
-                        
+                        <form id="reserveForm">
                             <div class="form-group row">
                                 <div class="col-12 col-sm-8 float-right">
                                     <label for="numCampers">Number of Campers</label>
                                     <div class="col-sm-6">
-                                    <select class="form-control align-items-right" id="numCampers">
-                                        <option value="">Select...</option>
-                                        <option>1</option>
-                                        <option>2</option>
-                                        <option>3</option>
-                                        <option>4</option>
-                                        <option>5</option>
-                                        <option>6</option>
-                                    </select>
+                                        <select class="col" id="numCampers">
+                                            <option value="">Select...</option>
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            <option>5</option>
+                                            <option>6</option>
+                                        </select>
+                                    </div>
                                 </div>
-</div>
                                 <div class="row form-group">
                                     <div class="col-12 col-sm-8 mb-4 float-right">
                                         <label for="DateChampers" class="col-form-label col-sm-6">Date</label>
@@ -91,7 +87,6 @@
 
                                     <button type="Search" class="btn btn-primary ">Search</button>
 
-
                                     <button type="Cancel" class="btn btn btn-secondary "
                                         data-dismiss="modal">Cancel</button>
 
@@ -104,8 +99,6 @@
             </div>
         </div>
     </div>
-
-
 
     <nav class="navbar navbar-expand-sm navbar-dark sticky-top">
         <div class="container">
@@ -129,12 +122,13 @@
                 </div>
         </div>
     </nav>
+    <!--Login Modal-->
     <div id="loginModal" class="modal fade" role="dialog">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
                     <h3 class="modal-title">Login</h3>
-                    <button type="button" class="close" id="loginButton";</button>
+                    <button type="button" class="close" id="buttonModal"></button>
                 </div>
                 <div class="modal-body">
                     <div class="container-fluid">
@@ -218,7 +212,6 @@
                         <i class="fa fa-pause"></i>
                     </button>
 
-
                 </div>
             </div>
         </div>
@@ -278,7 +271,6 @@
         </div>
     </div>
 
-
     <footer class="site-footer">
         <div class="container">
             <div class="row">
@@ -313,17 +305,13 @@
         </div>
     </footer>
 
-        <!-- build:js js/main.js -->
+    <!-- build:js js/main.js -->
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="js/scripts.js"></script>
     <!-- endbuild -->
 
-
-    <script src="./js/scripts.js"></script>
 </body>
-
-
 
 </html>

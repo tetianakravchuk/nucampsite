@@ -1,6 +1,6 @@
-$(function() {
-    $(".carousel").carousel( { interval: 2000 } );
-    $("#carouselButton").click(function(){
+$(function () {
+    $(".carousel").carousel({ interval: 2000 });
+    $("#carouselButton").on('click', function () {
         if ($("#carouselButton").children("i").hasClass("fa-pause")) {
             $(".carousel").carousel("pause");
             $("#carouselButton").children("i").removeClass("fa-pause");
@@ -8,16 +8,21 @@ $(function() {
         } else {
             $(".carousel").carousel("cycle");
             $("#carouselButton").children("i").removeClass("fa-play");
-            $("#carouselButton").children("i").addClass("fa-pause"); 
+            $("#carouselButton").children("i").addClass("fa-pause");
         }
     });
-})
-
-
-$('#reserveButton').on('click', function() {
-    $('#reserveModal').show();
 });
 
-$('#loginButton').on('click', function() {
-    $('#loginModal').show();
-});
+$(function() {
+    $('#reserveButton').on('click', function() {
+      const reserveModal = new bootstrap.Modal('#reserveModal', {});
+      reserveModal.show();
+    });
+  
+    $('#loginButton').on('click', function() {
+      const loginModal = new bootstrap.Modal('#loginModal', {});
+      loginModal.show();
+  
+    });
+  });
+
